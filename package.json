@@ -1,0 +1,18 @@
+{
+  "name": "material-color-utilities-proxy",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "typescript/dist/index.js",
+  "module": "typescript/dist/index.js",
+  "types": "typescript/dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./typescript/dist/index.js",
+      "types": "./typescript/dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "prepare": "npm --prefix typescript ci && npm --prefix typescript run build"
+  }
+}
