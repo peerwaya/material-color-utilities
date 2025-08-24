@@ -3,16 +3,16 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
-  "main": "typescript/dist/index.js",
-  "module": "typescript/dist/index.js",
-  "types": "typescript/dist/index.d.ts",
+  "main": "typescript/index.js",
+  "module": "typescript/index.js",
+  "types": "typescript/index.d.ts",
   "exports": {
     ".": {
-      "import": "./typescript/dist/index.js",
-      "types": "./typescript/dist/index.d.ts"
+      "import": "./typescript/index.js",
+      "types": "./typescript/index.d.ts"
     }
   },
   "scripts": {
-    "prepare": "npm --prefix typescript ci && npm --prefix typescript run build"
+    "prepare": "yarn --cwd typescript install --immutable && yarn --cwd typescript build"
   }
 }
